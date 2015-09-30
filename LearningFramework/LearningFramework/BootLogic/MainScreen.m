@@ -8,7 +8,9 @@
 
 #import "MainScreen.h"
 #import "BootLogic.h"
-@interface MainScreen () <UIAlertViewDelegate>
+#import "ADTransformTransition.h"
+
+@interface MainScreen () <UIAlertViewDelegate, ADNavigationControllerDelegate>
 
 @end
 
@@ -91,8 +93,45 @@
     }
     detailScreen.title = menuItem[TITLE];
     
+    ADNavigationControllerDelegate * navigationDelegate = [[ADNavigationControllerDelegate alloc] init];
+    navigationController.delegate = navigationDelegate;
+    
+    //toanlh: effect for pushviewcontroller
+//    CATransition *transition = [CATransition animation];
+//    transition.duration = 1.0;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromTop;
+//    transition.delegate = self;
+//    
+//    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    
     if (detailScreen) {
-        [self.navigationController pushViewController:detailScreen animated:YES];
+//        [UIView transitionFromView:self.navigationController.topViewController.view toView:detailScreen.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
+//            [self.navigationController pushViewController:detailScreen animated:NO];
+//        }];
+        
+        //UIViewAnimationOptionTransitionFlipFromRight: xoay theo trục Oy 180 độ
+        //UIViewAnimationOptionTransitionFlipFromLeft: xoay theo trục Oy 180 độ
+        //UIViewAnimationOptionTransitionFlipFromBottom: xoay theo trục Ox 180 độ
+        //UIViewAnimationOptionTransitionFlipFromTop: xoay theo trục Ox 180 độ
+        
+        //UIViewAnimationOptionTransitionCrossDissolve
+        //UIViewAnimationOptionTransitionCurlDown: lật trang sách từ trên xuống dưới
+        //UIViewAnimationOptionTransitionCurlUp: lật trang sách từ dưới lên
+        
+        
+        //cách 2: animation
+//        [UIView animateWithDuration:1
+//                         animations:^{
+//                             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//                             [self.navigationController pushViewController:detailScreen animated:NO];
+//                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:NO];
+//                         }];
+        
+//        [self.navigationController pushViewController:detailScreen animated:YES];
+        
+        
     } else {
         //Warn if cannot initialize detailScreen
         NSString* message = [NSString stringWithFormat:@"Please implement screen %@", xibClass];

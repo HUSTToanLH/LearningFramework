@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0325FED21BBBC55400CC334E /* DemoInitFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FED11BBBC55400CC334E /* DemoInitFunction.m */; };
+		0325FED81BBBE58300CC334E /* DemoVisualEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FED71BBBE58300CC334E /* DemoVisualEffectView.m */; };
+		0325FEDA1BBBF0E400CC334E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0325FED91BBBF0E400CC334E /* QuartzCore.framework */; };
+		0325FF0E1BBBF13100CC334E /* ADBackFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEDD1BBBF13100CC334E /* ADBackFadeTransition.m */; };
+		0325FF0F1BBBF13100CC334E /* ADCarrouselTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEDF1BBBF13100CC334E /* ADCarrouselTransition.m */; };
+		0325FF101BBBF13100CC334E /* ADCrossTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEE11BBBF13100CC334E /* ADCrossTransition.m */; };
+		0325FF111BBBF13100CC334E /* ADCubeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEE31BBBF13100CC334E /* ADCubeTransition.m */; };
+		0325FF121BBBF13200CC334E /* ADDualTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEE51BBBF13100CC334E /* ADDualTransition.m */; };
+		0325FF131BBBF13200CC334E /* ADFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEE71BBBF13100CC334E /* ADFadeTransition.m */; };
+		0325FF141BBBF13200CC334E /* ADFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEE91BBBF13100CC334E /* ADFlipTransition.m */; };
+		0325FF151BBBF13200CC334E /* ADFoldTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEEB1BBBF13100CC334E /* ADFoldTransition.m */; };
+		0325FF161BBBF13200CC334E /* ADGhostTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEED1BBBF13100CC334E /* ADGhostTransition.m */; };
+		0325FF171BBBF13200CC334E /* ADGlueTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEEF1BBBF13100CC334E /* ADGlueTransition.m */; };
+		0325FF181BBBF13200CC334E /* ADModernPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEF11BBBF13100CC334E /* ADModernPushTransition.m */; };
+		0325FF191BBBF13200CC334E /* ADNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEF31BBBF13100CC334E /* ADNavigationControllerDelegate.m */; };
+		0325FF1A1BBBF13200CC334E /* ADPushRotateTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEF51BBBF13100CC334E /* ADPushRotateTransition.m */; };
+		0325FF1B1BBBF13200CC334E /* ADScaleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEF71BBBF13100CC334E /* ADScaleTransition.m */; };
+		0325FF1C1BBBF13200CC334E /* ADSlideTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEF91BBBF13100CC334E /* ADSlideTransition.m */; };
+		0325FF1D1BBBF13200CC334E /* ADSwapTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEFB1BBBF13100CC334E /* ADSwapTransition.m */; };
+		0325FF1E1BBBF13200CC334E /* ADSwipeFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEFD1BBBF13100CC334E /* ADSwipeFadeTransition.m */; };
+		0325FF1F1BBBF13200CC334E /* ADSwipeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FEFF1BBBF13100CC334E /* ADSwipeTransition.m */; };
+		0325FF201BBBF13200CC334E /* ADTransformTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FF011BBBF13100CC334E /* ADTransformTransition.m */; };
+		0325FF211BBBF13200CC334E /* ADTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FF031BBBF13100CC334E /* ADTransition.m */; };
+		0325FF221BBBF13200CC334E /* ADTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FF051BBBF13100CC334E /* ADTransitionController.m */; };
+		0325FF231BBBF13200CC334E /* ADTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FF071BBBF13100CC334E /* ADTransitioningDelegate.m */; };
+		0325FF241BBBF13200CC334E /* ADTransitioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FF091BBBF13100CC334E /* ADTransitioningViewController.m */; };
+		0325FF251BBBF13200CC334E /* ADZoomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FF0B1BBBF13100CC334E /* ADZoomTransition.m */; };
+		0325FF261BBBF13200CC334E /* UIViewController+ADTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325FF0D1BBBF13100CC334E /* UIViewController+ADTransitionController.m */; };
 		03ABBAB51BAFA2690039E259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ABBAB41BAFA2690039E259 /* main.m */; };
 		03ABBAC01BAFA2690039E259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03ABBABF1BAFA2690039E259 /* Images.xcassets */; };
 		03ABBAC31BAFA2690039E259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03ABBAC11BAFA2690039E259 /* LaunchScreen.xib */; };
@@ -21,9 +49,68 @@
 		03ABBB061BAFB66B0039E259 /* PlayVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03ABBB041BAFB66B0039E259 /* PlayVideo.xib */; };
 		03ABBB0F1BB002790039E259 /* AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ABBB0D1BB002790039E259 /* AutoLayout.m */; };
 		03ABBB101BB002790039E259 /* AutoLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03ABBB0E1BB002790039E259 /* AutoLayout.xib */; };
+		03D43F541BB913A3003A8D40 /* BootMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D43F531BB913A3003A8D40 /* BootMenu.plist */; };
+		03D43F771BBA6ABD003A8D40 /* UsingBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D43F751BBA6ABD003A8D40 /* UsingBlock.m */; };
+		03D43F781BBA6ABD003A8D40 /* UsingBlock.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D43F761BBA6ABD003A8D40 /* UsingBlock.xib */; };
+		03D43F7B1BBA7A71003A8D40 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D43F7A1BBA7A71003A8D40 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0325FED01BBBC55400CC334E /* DemoInitFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoInitFunction.h; path = CoreLearning/DemoInitFunction.h; sourceTree = "<group>"; };
+		0325FED11BBBC55400CC334E /* DemoInitFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoInitFunction.m; path = CoreLearning/DemoInitFunction.m; sourceTree = "<group>"; };
+		0325FED61BBBE58300CC334E /* DemoVisualEffectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoVisualEffectView.h; path = CoreLearning/DemoVisualEffectView.h; sourceTree = "<group>"; };
+		0325FED71BBBE58300CC334E /* DemoVisualEffectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoVisualEffectView.m; path = CoreLearning/DemoVisualEffectView.m; sourceTree = "<group>"; };
+		0325FED91BBBF0E400CC334E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0325FEDC1BBBF13100CC334E /* ADBackFadeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBackFadeTransition.h; sourceTree = "<group>"; };
+		0325FEDD1BBBF13100CC334E /* ADBackFadeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADBackFadeTransition.m; sourceTree = "<group>"; };
+		0325FEDE1BBBF13100CC334E /* ADCarrouselTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCarrouselTransition.h; sourceTree = "<group>"; };
+		0325FEDF1BBBF13100CC334E /* ADCarrouselTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCarrouselTransition.m; sourceTree = "<group>"; };
+		0325FEE01BBBF13100CC334E /* ADCrossTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCrossTransition.h; sourceTree = "<group>"; };
+		0325FEE11BBBF13100CC334E /* ADCrossTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCrossTransition.m; sourceTree = "<group>"; };
+		0325FEE21BBBF13100CC334E /* ADCubeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCubeTransition.h; sourceTree = "<group>"; };
+		0325FEE31BBBF13100CC334E /* ADCubeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADCubeTransition.m; sourceTree = "<group>"; };
+		0325FEE41BBBF13100CC334E /* ADDualTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDualTransition.h; sourceTree = "<group>"; };
+		0325FEE51BBBF13100CC334E /* ADDualTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDualTransition.m; sourceTree = "<group>"; };
+		0325FEE61BBBF13100CC334E /* ADFadeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFadeTransition.h; sourceTree = "<group>"; };
+		0325FEE71BBBF13100CC334E /* ADFadeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFadeTransition.m; sourceTree = "<group>"; };
+		0325FEE81BBBF13100CC334E /* ADFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFlipTransition.h; sourceTree = "<group>"; };
+		0325FEE91BBBF13100CC334E /* ADFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFlipTransition.m; sourceTree = "<group>"; };
+		0325FEEA1BBBF13100CC334E /* ADFoldTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADFoldTransition.h; sourceTree = "<group>"; };
+		0325FEEB1BBBF13100CC334E /* ADFoldTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADFoldTransition.m; sourceTree = "<group>"; };
+		0325FEEC1BBBF13100CC334E /* ADGhostTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADGhostTransition.h; sourceTree = "<group>"; };
+		0325FEED1BBBF13100CC334E /* ADGhostTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADGhostTransition.m; sourceTree = "<group>"; };
+		0325FEEE1BBBF13100CC334E /* ADGlueTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADGlueTransition.h; sourceTree = "<group>"; };
+		0325FEEF1BBBF13100CC334E /* ADGlueTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADGlueTransition.m; sourceTree = "<group>"; };
+		0325FEF01BBBF13100CC334E /* ADModernPushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADModernPushTransition.h; sourceTree = "<group>"; };
+		0325FEF11BBBF13100CC334E /* ADModernPushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADModernPushTransition.m; sourceTree = "<group>"; };
+		0325FEF21BBBF13100CC334E /* ADNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		0325FEF31BBBF13100CC334E /* ADNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADNavigationControllerDelegate.m; sourceTree = "<group>"; };
+		0325FEF41BBBF13100CC334E /* ADPushRotateTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPushRotateTransition.h; sourceTree = "<group>"; };
+		0325FEF51BBBF13100CC334E /* ADPushRotateTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPushRotateTransition.m; sourceTree = "<group>"; };
+		0325FEF61BBBF13100CC334E /* ADScaleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADScaleTransition.h; sourceTree = "<group>"; };
+		0325FEF71BBBF13100CC334E /* ADScaleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADScaleTransition.m; sourceTree = "<group>"; };
+		0325FEF81BBBF13100CC334E /* ADSlideTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSlideTransition.h; sourceTree = "<group>"; };
+		0325FEF91BBBF13100CC334E /* ADSlideTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSlideTransition.m; sourceTree = "<group>"; };
+		0325FEFA1BBBF13100CC334E /* ADSwapTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSwapTransition.h; sourceTree = "<group>"; };
+		0325FEFB1BBBF13100CC334E /* ADSwapTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSwapTransition.m; sourceTree = "<group>"; };
+		0325FEFC1BBBF13100CC334E /* ADSwipeFadeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSwipeFadeTransition.h; sourceTree = "<group>"; };
+		0325FEFD1BBBF13100CC334E /* ADSwipeFadeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSwipeFadeTransition.m; sourceTree = "<group>"; };
+		0325FEFE1BBBF13100CC334E /* ADSwipeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSwipeTransition.h; sourceTree = "<group>"; };
+		0325FEFF1BBBF13100CC334E /* ADSwipeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSwipeTransition.m; sourceTree = "<group>"; };
+		0325FF001BBBF13100CC334E /* ADTransformTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransformTransition.h; sourceTree = "<group>"; };
+		0325FF011BBBF13100CC334E /* ADTransformTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransformTransition.m; sourceTree = "<group>"; };
+		0325FF021BBBF13100CC334E /* ADTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransition.h; sourceTree = "<group>"; };
+		0325FF031BBBF13100CC334E /* ADTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransition.m; sourceTree = "<group>"; };
+		0325FF041BBBF13100CC334E /* ADTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransitionController.h; sourceTree = "<group>"; };
+		0325FF051BBBF13100CC334E /* ADTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransitionController.m; sourceTree = "<group>"; };
+		0325FF061BBBF13100CC334E /* ADTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransitioningDelegate.h; sourceTree = "<group>"; };
+		0325FF071BBBF13100CC334E /* ADTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransitioningDelegate.m; sourceTree = "<group>"; };
+		0325FF081BBBF13100CC334E /* ADTransitioningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTransitioningViewController.h; sourceTree = "<group>"; };
+		0325FF091BBBF13100CC334E /* ADTransitioningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTransitioningViewController.m; sourceTree = "<group>"; };
+		0325FF0A1BBBF13100CC334E /* ADZoomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADZoomTransition.h; sourceTree = "<group>"; };
+		0325FF0B1BBBF13100CC334E /* ADZoomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADZoomTransition.m; sourceTree = "<group>"; };
+		0325FF0C1BBBF13100CC334E /* UIViewController+ADTransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ADTransitionController.h"; sourceTree = "<group>"; };
+		0325FF0D1BBBF13100CC334E /* UIViewController+ADTransitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ADTransitionController.m"; sourceTree = "<group>"; };
 		03ABBAAF1BAFA2690039E259 /* LearningFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03ABBAB31BAFA2690039E259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03ABBAB41BAFA2690039E259 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,6 +133,12 @@
 		03ABBB0C1BB002790039E259 /* AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoLayout.h; path = Autolayout/AutoLayout.h; sourceTree = "<group>"; };
 		03ABBB0D1BB002790039E259 /* AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoLayout.m; path = Autolayout/AutoLayout.m; sourceTree = "<group>"; };
 		03ABBB0E1BB002790039E259 /* AutoLayout.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AutoLayout.xib; path = Autolayout/AutoLayout.xib; sourceTree = "<group>"; };
+		03D43F531BB913A3003A8D40 /* BootMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = BootMenu.plist; path = BootLogic/BootMenu.plist; sourceTree = "<group>"; };
+		03D43F741BBA6ABD003A8D40 /* UsingBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsingBlock.h; path = CoreLearning/UsingBlock.h; sourceTree = "<group>"; };
+		03D43F751BBA6ABD003A8D40 /* UsingBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsingBlock.m; path = CoreLearning/UsingBlock.m; sourceTree = "<group>"; };
+		03D43F761BBA6ABD003A8D40 /* UsingBlock.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsingBlock.xib; path = CoreLearning/UsingBlock.xib; sourceTree = "<group>"; };
+		03D43F791BBA7A71003A8D40 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Car.h; path = CoreLearning/Car.h; sourceTree = "<group>"; };
+		03D43F7A1BBA7A71003A8D40 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Car.m; path = CoreLearning/Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0325FEDA1BBBF0E400CC334E /* QuartzCore.framework in Frameworks */,
 				03ABBB011BAFB51E0039E259 /* MediaPlayer.framework in Frameworks */,
 				03ABBAFF1BAFA8E30039E259 /* AVFoundation.framework in Frameworks */,
 			);
@@ -61,9 +155,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0325FEDB1BBBF0EE00CC334E /* TransationView */ = {
+			isa = PBXGroup;
+			children = (
+				0325FEDC1BBBF13100CC334E /* ADBackFadeTransition.h */,
+				0325FEDD1BBBF13100CC334E /* ADBackFadeTransition.m */,
+				0325FEDE1BBBF13100CC334E /* ADCarrouselTransition.h */,
+				0325FEDF1BBBF13100CC334E /* ADCarrouselTransition.m */,
+				0325FEE01BBBF13100CC334E /* ADCrossTransition.h */,
+				0325FEE11BBBF13100CC334E /* ADCrossTransition.m */,
+				0325FEE21BBBF13100CC334E /* ADCubeTransition.h */,
+				0325FEE31BBBF13100CC334E /* ADCubeTransition.m */,
+				0325FEE41BBBF13100CC334E /* ADDualTransition.h */,
+				0325FEE51BBBF13100CC334E /* ADDualTransition.m */,
+				0325FEE61BBBF13100CC334E /* ADFadeTransition.h */,
+				0325FEE71BBBF13100CC334E /* ADFadeTransition.m */,
+				0325FEE81BBBF13100CC334E /* ADFlipTransition.h */,
+				0325FEE91BBBF13100CC334E /* ADFlipTransition.m */,
+				0325FEEA1BBBF13100CC334E /* ADFoldTransition.h */,
+				0325FEEB1BBBF13100CC334E /* ADFoldTransition.m */,
+				0325FEEC1BBBF13100CC334E /* ADGhostTransition.h */,
+				0325FEED1BBBF13100CC334E /* ADGhostTransition.m */,
+				0325FEEE1BBBF13100CC334E /* ADGlueTransition.h */,
+				0325FEEF1BBBF13100CC334E /* ADGlueTransition.m */,
+				0325FEF01BBBF13100CC334E /* ADModernPushTransition.h */,
+				0325FEF11BBBF13100CC334E /* ADModernPushTransition.m */,
+				0325FEF21BBBF13100CC334E /* ADNavigationControllerDelegate.h */,
+				0325FEF31BBBF13100CC334E /* ADNavigationControllerDelegate.m */,
+				0325FEF41BBBF13100CC334E /* ADPushRotateTransition.h */,
+				0325FEF51BBBF13100CC334E /* ADPushRotateTransition.m */,
+				0325FEF61BBBF13100CC334E /* ADScaleTransition.h */,
+				0325FEF71BBBF13100CC334E /* ADScaleTransition.m */,
+				0325FEF81BBBF13100CC334E /* ADSlideTransition.h */,
+				0325FEF91BBBF13100CC334E /* ADSlideTransition.m */,
+				0325FEFA1BBBF13100CC334E /* ADSwapTransition.h */,
+				0325FEFB1BBBF13100CC334E /* ADSwapTransition.m */,
+				0325FEFC1BBBF13100CC334E /* ADSwipeFadeTransition.h */,
+				0325FEFD1BBBF13100CC334E /* ADSwipeFadeTransition.m */,
+				0325FEFE1BBBF13100CC334E /* ADSwipeTransition.h */,
+				0325FEFF1BBBF13100CC334E /* ADSwipeTransition.m */,
+				0325FF001BBBF13100CC334E /* ADTransformTransition.h */,
+				0325FF011BBBF13100CC334E /* ADTransformTransition.m */,
+				0325FF021BBBF13100CC334E /* ADTransition.h */,
+				0325FF031BBBF13100CC334E /* ADTransition.m */,
+				0325FF041BBBF13100CC334E /* ADTransitionController.h */,
+				0325FF051BBBF13100CC334E /* ADTransitionController.m */,
+				0325FF061BBBF13100CC334E /* ADTransitioningDelegate.h */,
+				0325FF071BBBF13100CC334E /* ADTransitioningDelegate.m */,
+				0325FF081BBBF13100CC334E /* ADTransitioningViewController.h */,
+				0325FF091BBBF13100CC334E /* ADTransitioningViewController.m */,
+				0325FF0A1BBBF13100CC334E /* ADZoomTransition.h */,
+				0325FF0B1BBBF13100CC334E /* ADZoomTransition.m */,
+				0325FF0C1BBBF13100CC334E /* UIViewController+ADTransitionController.h */,
+				0325FF0D1BBBF13100CC334E /* UIViewController+ADTransitionController.m */,
+			);
+			name = TransationView;
+			sourceTree = "<group>";
+		};
 		03ABBAA61BAFA2690039E259 = {
 			isa = PBXGroup;
 			children = (
+				0325FED91BBBF0E400CC334E /* QuartzCore.framework */,
 				03ABBB001BAFB51E0039E259 /* MediaPlayer.framework */,
 				03ABBAFE1BAFA8E30039E259 /* AVFoundation.framework */,
 				03ABBAB11BAFA2690039E259 /* LearningFramework */,
@@ -82,7 +234,9 @@
 		03ABBAB11BAFA2690039E259 /* LearningFramework */ = {
 			isa = PBXGroup;
 			children = (
+				0325FEDB1BBBF0EE00CC334E /* TransationView */,
 				03ABBAD81BAFA29F0039E259 /* BootLogic */,
+				03D43F521BB91347003A8D40 /* CoreLearning */,
 				03ABBAE51BAFA3280039E259 /* Multimedia */,
 				03ABBB0B1BB0021C0039E259 /* Autolayout */,
 				03ABBABF1BAFA2690039E259 /* Images.xcassets */,
@@ -112,6 +266,7 @@
 				03ABBAF01BAFA41F0039E259 /* ConsoleScreen.m */,
 				03ABBAF11BAFA41F0039E259 /* MainScreen.h */,
 				03ABBAF21BAFA41F0039E259 /* MainScreen.m */,
+				03D43F531BB913A3003A8D40 /* BootMenu.plist */,
 			);
 			name = BootLogic;
 			sourceTree = "<group>";
@@ -135,6 +290,22 @@
 				03ABBB0E1BB002790039E259 /* AutoLayout.xib */,
 			);
 			name = Autolayout;
+			sourceTree = "<group>";
+		};
+		03D43F521BB91347003A8D40 /* CoreLearning */ = {
+			isa = PBXGroup;
+			children = (
+				03D43F741BBA6ABD003A8D40 /* UsingBlock.h */,
+				03D43F751BBA6ABD003A8D40 /* UsingBlock.m */,
+				03D43F761BBA6ABD003A8D40 /* UsingBlock.xib */,
+				03D43F791BBA7A71003A8D40 /* Car.h */,
+				03D43F7A1BBA7A71003A8D40 /* Car.m */,
+				0325FED01BBBC55400CC334E /* DemoInitFunction.h */,
+				0325FED11BBBC55400CC334E /* DemoInitFunction.m */,
+				0325FED61BBBE58300CC334E /* DemoVisualEffectView.h */,
+				0325FED71BBBE58300CC334E /* DemoVisualEffectView.m */,
+			);
+			name = CoreLearning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +365,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D43F781BBA6ABD003A8D40 /* UsingBlock.xib in Resources */,
 				03ABBAC31BAFA2690039E259 /* LaunchScreen.xib in Resources */,
 				03ABBB101BB002790039E259 /* AutoLayout.xib in Resources */,
 				03ABBAFD1BAFA8B00039E259 /* savefrom.mp4 in Resources */,
 				03ABBAC01BAFA2690039E259 /* Images.xcassets in Resources */,
 				03ABBB061BAFB66B0039E259 /* PlayVideo.xib in Resources */,
+				03D43F541BB913A3003A8D40 /* BootMenu.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,12 +382,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0325FF261BBBF13200CC334E /* UIViewController+ADTransitionController.m in Sources */,
+				03D43F7B1BBA7A71003A8D40 /* Car.m in Sources */,
+				0325FF211BBBF13200CC334E /* ADTransition.m in Sources */,
+				0325FF251BBBF13200CC334E /* ADZoomTransition.m in Sources */,
+				0325FF151BBBF13200CC334E /* ADFoldTransition.m in Sources */,
+				0325FF191BBBF13200CC334E /* ADNavigationControllerDelegate.m in Sources */,
+				0325FF1D1BBBF13200CC334E /* ADSwapTransition.m in Sources */,
+				0325FF241BBBF13200CC334E /* ADTransitioningViewController.m in Sources */,
+				0325FF201BBBF13200CC334E /* ADTransformTransition.m in Sources */,
+				03D43F771BBA6ABD003A8D40 /* UsingBlock.m in Sources */,
+				0325FF221BBBF13200CC334E /* ADTransitionController.m in Sources */,
+				0325FF161BBBF13200CC334E /* ADGhostTransition.m in Sources */,
+				0325FF0E1BBBF13100CC334E /* ADBackFadeTransition.m in Sources */,
+				0325FF231BBBF13200CC334E /* ADTransitioningDelegate.m in Sources */,
+				0325FF121BBBF13200CC334E /* ADDualTransition.m in Sources */,
+				0325FF1C1BBBF13200CC334E /* ADSlideTransition.m in Sources */,
+				0325FF141BBBF13200CC334E /* ADFlipTransition.m in Sources */,
+				0325FED21BBBC55400CC334E /* DemoInitFunction.m in Sources */,
 				03ABBAF41BAFA41F0039E259 /* BootLogic.m in Sources */,
+				0325FF1A1BBBF13200CC334E /* ADPushRotateTransition.m in Sources */,
 				03ABBAF61BAFA41F0039E259 /* MainScreen.m in Sources */,
+				0325FF1B1BBBF13200CC334E /* ADScaleTransition.m in Sources */,
+				0325FF171BBBF13200CC334E /* ADGlueTransition.m in Sources */,
+				0325FF0F1BBBF13100CC334E /* ADCarrouselTransition.m in Sources */,
 				03ABBB0F1BB002790039E259 /* AutoLayout.m in Sources */,
+				0325FED81BBBE58300CC334E /* DemoVisualEffectView.m in Sources */,
+				0325FF181BBBF13200CC334E /* ADModernPushTransition.m in Sources */,
 				03ABBAF51BAFA41F0039E259 /* ConsoleScreen.m in Sources */,
+				0325FF111BBBF13100CC334E /* ADCubeTransition.m in Sources */,
+				0325FF131BBBF13200CC334E /* ADFadeTransition.m in Sources */,
+				0325FF101BBBF13100CC334E /* ADCrossTransition.m in Sources */,
+				0325FF1F1BBBF13200CC334E /* ADSwipeTransition.m in Sources */,
 				03ABBB051BAFB66B0039E259 /* PlayVideo.m in Sources */,
 				03ABBAF31BAFA41F0039E259 /* AppDelegate.m in Sources */,
+				0325FF1E1BBBF13200CC334E /* ADSwipeFadeTransition.m in Sources */,
 				03ABBAB51BAFA2690039E259 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

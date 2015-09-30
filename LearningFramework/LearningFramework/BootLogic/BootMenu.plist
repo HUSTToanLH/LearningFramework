@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Multimedia</string>
+		<key>status</key>
+		<true/>
+		<key>childs</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Play Video</string>
+				<key>class</key>
+				<string>PlayVideo</string>
+				<key>status</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>AutoLayout</string>
+		<key>status</key>
+		<true/>
+		<key>childs</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Auto Layout</string>
+				<key>class</key>
+				<string>AutoLayout</string>
+				<key>status</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>CoreLearning</string>
+		<key>status</key>
+		<true/>
+		<key>childs</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Using Block</string>
+				<key>class</key>
+				<string>UsingBlock</string>
+				<key>status</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Demo InitFunction</string>
+				<key>class</key>
+				<string>DemoInitFunction</string>
+				<key>status</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Demo VisualEffectView</string>
+				<key>class</key>
+				<string>DemoVisualEffectView</string>
+				<key>status</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

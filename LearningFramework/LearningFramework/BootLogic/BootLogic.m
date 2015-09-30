@@ -15,12 +15,39 @@
 {
     MainScreen* mainScreen = [[MainScreen alloc] initWithStyle:UITableViewStyleGrouped];
     //--------- From this line, please customize your menu data -----------
-    NSDictionary* multi = @{SECTION: @"Multimedia", MENU: @[
-                                    @{TITLE: @"Play Video", CLASS: @"PlayVideo"}                          ]};
-    NSDictionary* autolayout = @{SECTION: @"Autolayout", MENU: @[
-                                    @{TITLE: @"Auto layout", CLASS: @"AutoLayout"}                          ]};
+//    NSDictionary* multi = @{SECTION: @"Multimedia", MENU: @[
+//                                    @{TITLE: @"Play Video", CLASS: @"PlayVideo"}                          ]};
+//    NSDictionary* autolayout = @{SECTION: @"Autolayout", MENU: @[
+//                                    @{TITLE: @"Auto layout", CLASS: @"AutoLayout"}                          ]};
     
-    mainScreen.menu = @[multi, autolayout];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BootMenu" ofType:@"plist"];
+    NSArray *content = [[NSArray alloc] initWithContentsOfFile:path];
+    NSMutableArray *mainMenu = [NSMutableArray new];
+    
+    for (int i = 0; i < content.count; i++) {
+        NSDictionary *dic = (NSDictionary *)[content objectAtIndex:i];
+        
+        if (dic) {
+            if ((BOOL)[dic valueForKey:@"status"] == YES) {
+                NSArray *arr = (NSArray*)[dic objectForKey:@"childs"];
+                NSMutableArray *childMenu = [NSMutableArray new];
+                if (arr) {
+                    for (int j = 0; j < arr.count; j++) {
+                        NSDictionary *childDic = (NSDictionary*)[arr objectAtIndex:j];
+                        if (childDic) {
+                            if ((BOOL)[childDic valueForKey:@"status"] == YES) {
+                                [childMenu addObject:@{TITLE: [childDic valueForKey:@"name"], CLASS: [childDic valueForKey:@"class"]}];
+                                
+                            }
+                        }
+                    }
+                }
+                [mainMenu addObject:@{SECTION: [dic valueForKey:@"name"], MENU: childMenu}];
+            }
+        }
+    }
+    
+    mainScreen.menu = mainMenu;
     mainScreen.title = @"ToanLH demo App";
     mainScreen.about = @"This is demo learning framework demo app. It is collection of sample code of AVFoundation";
     //--------- End of customization -----------
