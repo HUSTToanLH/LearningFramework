@@ -7,38 +7,76 @@
 //
 
 #import "DemoVisualEffectView.h"
+#import "AutoLayout.h"
+#import "MainScreen.h"
 
 @interface DemoVisualEffectView ()
 
 @end
 
-@implementation DemoVisualEffectView
+@implementation DemoVisualEffectView{
+    ADTransitionController *vc;
+    UIViewController *main;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Blur effect
-    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    [blurEffectView setFrame:self.view.bounds];
-    [self.view addSubview:blurEffectView];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.view.backgroundColor = [UIColor grayColor];
+    [self addViewController];
+}
+
+-(void)addViewController{
+    main = [UIViewController new];
+    main.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height/2);
+    main.view.backgroundColor = [UIColor yellowColor];
+    main.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
     
-    // Vibrancy effect
-    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:blurEffect];
-    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
-    [vibrancyEffectView setFrame:self.view.bounds];
+    [main.view addGestureRecognizer:tap];
     
-    // Label for vibrant text
-    UILabel *vibrantLabel = [[UILabel alloc] init];
-    [vibrantLabel setText:@"Vibrant"];
-    [vibrantLabel setFont:[UIFont systemFontOfSize:72.0f]];
-    [vibrantLabel sizeToFit];
-    [vibrantLabel setCenter: self.view.center];
+    vc = [[ADTransitionController alloc] initWithMainViewController:main];
+    [vc setNavigationBarHidden:YES];
+    vc.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height/2);
     
-    // Add label to the vibrancy view
-    [[vibrancyEffectView contentView] addSubview:vibrantLabel];
+    [self addChildViewController:vc];
+    [self.view addSubview:vc.view];
+}
+
+-(void)onTap:(UITapGestureRecognizer*)ges{
+    if (ges.state == UIGestureRecognizerStateEnded) {
+        AutoLayout *autoView = [AutoLayout new];
+        autoView.view.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapBack:)];
+        
+        [autoView.view addGestureRecognizer:tap];
+        ADTransition * transition = [[ADCubeTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        [vc changeViewController:autoView withTransition:transition];
+    }
+}
+
+-(void)onTapBack:(UITapGestureRecognizer*)ges{
+    if (ges.state == UIGestureRecognizerStateEnded) {
+        ADTransition * transition = [[ADCubeTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        [vc changeViewController:main withTransition:transition];
+    }
+}
+
+-(void)addButton{
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    btn.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+    [btn setTitle:@"Open other view" forState:UIControlStateNormal];
     
-    // Add the vibrancy view to the blur view
-    [[blurEffectView contentView] addSubview:vibrancyEffectView];
+    [btn.titleLabel setFont:[UIFont fontWithName:@"Arial" size:13]];
+    [btn setBackgroundColor:[UIColor redColor]];
+    [btn addTarget:self action:@selector(onClickButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+
+-(void)onClickButton{
+    AutoLayout *autoView = [AutoLayout new];
+    ADTransition * transition = [[ADCubeTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+    [[AppDelegate getMainTransition] pushViewController:autoView withTransition:transition];
 }
 
 @end

@@ -20,6 +20,7 @@
     [super viewDidLoad];
 //    NSLog(@"height view 1: %f", _viewTop.bounds.size.height);
 //    NSLog(@"height view 2: %f", _viewBottom.bounds.size.height);
+    [self setTitle:@"AutoLayout"];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

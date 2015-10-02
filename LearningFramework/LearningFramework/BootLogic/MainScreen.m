@@ -9,8 +9,9 @@
 #import "MainScreen.h"
 #import "BootLogic.h"
 #import "ADTransformTransition.h"
+#import "ADNavigationControllerDelegate.h"
 
-@interface MainScreen () <UIAlertViewDelegate, ADNavigationControllerDelegate>
+@interface MainScreen () <UIAlertViewDelegate>
 
 @end
 
@@ -30,6 +31,7 @@
     [super viewDidLoad];
     UIBarButtonItem* barButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"About" style:UIBarButtonItemStylePlain target:self action:@selector(onAbout)];
     self.navigationItem.rightBarButtonItem = barButtonItem;
+//    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
 }
 - (void)setAbout:(NSString *)about {
     _about = [NSString stringWithFormat:@"%@\n\n%@", about, @"Written by Techmaster Vietnam Ltd"];
@@ -82,7 +84,6 @@
 
     UIViewController* detailScreen;
     
-    
     if([[NSBundle mainBundle] pathForResource:xibClass ofType:@"nib"] != nil)
     {
         //If the xib file exists
@@ -92,9 +93,6 @@
         detailScreen = [NSClassFromString(xibClass) new];
     }
     detailScreen.title = menuItem[TITLE];
-    
-    ADNavigationControllerDelegate * navigationDelegate = [[ADNavigationControllerDelegate alloc] init];
-    navigationController.delegate = navigationDelegate;
     
     //toanlh: effect for pushviewcontroller
 //    CATransition *transition = [CATransition animation];
@@ -107,6 +105,7 @@
 //    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
     
     if (detailScreen) {
+        //cách 1: transitionfromview
 //        [UIView transitionFromView:self.navigationController.topViewController.view toView:detailScreen.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
 //            [self.navigationController pushViewController:detailScreen animated:NO];
 //        }];
@@ -131,6 +130,56 @@
         
 //        [self.navigationController pushViewController:detailScreen animated:YES];
         
+        //cách 2: ADTranssition
+        //ADCarrouselTransition: hình hộp chìm
+//        ADTransition * transition = [[ADCarrouselTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+
+        //ADCubeTransition: hình hộp nổi
+//        ADTransition * transition = [[ADCubeTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADCrossTransition: cross 2 view
+//        ADTransition* transition= [[ADCrossTransition alloc] initWithDuration:0.25f];
+        
+        //ADFlipTransition: lật view
+        ADTransition * transition = [[ADFlipTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADSwapTransition: đổi view
+//        ADTransition * transition = [[ADSwapTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADFadeTransition: làm nhạt dần view trước để hiện view sau
+//        ADTransition * transition = [[ADFadeTransition alloc] initWithDuration:0.25f];
+        
+        //ADBackFadeTransition: thu nhỏ view trước rồi phóng to dần view sau
+//        ADTransition * transition = [[ADBackFadeTransition alloc] initWithDuration:0.25f];
+        
+        //ADGhostTransition: thu nhỏ view trước rồi hiện luôn view sau
+//        ADTransition * transition = [[ADGhostTransition alloc] initWithDuration:0.25f];
+        
+        //ADZoomTransition: hiện luôn view sau (animated: NO)
+//        ADTransition * transition = [[ADZoomTransition alloc] initWithDuration:0.25f];
+        
+        //ADSwipeTransition: giống mặc định
+//        ADTransition * transition = [[ADSwipeTransition alloc] initWithDuration:0.25 orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADSwipeFadeTransition: vừa swipe vừa fade (xấu)
+//        ADTransition * transition = [[ADSwipeFadeTransition alloc] initWithDuration:0.25 orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADScaleTransition: scale nhỏ view trước rồi hiện view sau
+//        ADTransition * transition = [[ADScaleTransition alloc] initWithDuration:0.25 orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADGlueTransition: giống đóng mở cửa (1 cánh)
+//        ADTransition * transition = [[ADGlueTransition alloc] initWithDuration:0.25 orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADPushRotateTransition: tương tự glue
+//         ADTransition * transition = [[ADPushRotateTransition alloc] initWithDuration:0.25 orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADFoldTransition: tương tự trên
+//        ADTransition * transition = [[ADFoldTransition alloc] initWithDuration:0.25 orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        //ADSlideTransition: giống chuyển slide
+//        ADTransition * transition = [[ADSlideTransition alloc] initWithDuration:0.25 orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        
+        [self.transitionController pushViewController:detailScreen withTransition:transition];
         
     } else {
         //Warn if cannot initialize detailScreen
@@ -138,8 +187,6 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
     }
-    
 }
-
 
 @end

@@ -23,7 +23,7 @@
 NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssociationKey";
 
 #define AD_NAVIGATION_BAR_HEIGHT 44.0f
-#define AD_TOOLBAR_HEIGHT 44.0f
+#define AD_TOOLBAR_HEIGHT 0.0f//44.0f
 #define AD_Z_DISTANCE 1000.0f
 
 @interface ADTransitionController (Private)
@@ -39,6 +39,9 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
 @end
 
 @implementation ADTransitionController
+{
+    BOOL isExistNavigationBar;
+}
 @synthesize viewControllers = _viewControllers;
 @synthesize topViewController = _topViewController;
 @synthesize visibleViewController = _visibleViewController;
@@ -62,6 +65,16 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
     if (self = [super init]) {
         [self _initialize];
         [self pushViewController:rootViewController withTransition:nil];
+        isExistNavigationBar = YES;
+    }
+    return self;
+}
+
+- (id)initWithMainViewController:(UIViewController *)rootViewController {
+    if (self = [super init]) {
+        [self _initialize];
+        [self changeViewController:rootViewController withTransition:nil];
+        isExistNavigationBar = NO;
     }
     return self;
 }
@@ -79,6 +92,12 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
     
     // Create and add navigation bar to the view
     CGFloat navigationBarHeight = AD_NAVIGATION_BAR_HEIGHT;
+    if (isExistNavigationBar) {
+        navigationBarHeight = AD_NAVIGATION_BAR_HEIGHT;
+    }
+    else{
+        navigationBarHeight = 0;
+    }
     _navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, navigationBarHeight)];
     _navigationBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     _navigationBar.delegate = self;
@@ -92,7 +111,7 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
     [self.view addSubview:_toolbar];
     
     // Create and add the container view that will hold the controller views
-    _containerView = [[ADTransitionView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + navigationBarHeight, self.view.frame.size.width, self.view.frame.size.height - navigationBarHeight - toolbarHeight)];
+    _containerView = [[ADTransitionView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + navigationBarHeight, self.view.frame.size.width, self.view.bounds.size.height - navigationBarHeight - toolbarHeight)];
     _containerView.autoresizesSubviews = YES;
     _containerView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:_containerView];
@@ -136,14 +155,17 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
         return;
     CGFloat previousNavigationBarHeight = self.navigationBar.frame.size.height;
     CGFloat previousToolbarHeight = self.toolbar.frame.size.height;
-    [self.navigationBar sizeToFit];
-    [self.toolbar sizeToFit];
+//    [self.navigationBar sizeToFit];
+//    [self.toolbar sizeToFit];
     CGFloat navigationBarHeight = self.navigationBar.frame.size.height;
     CGFloat toolBarHeight = self.toolbar.frame.size.height;
     CGFloat navigationBarHeightDifference = navigationBarHeight - previousNavigationBarHeight;
     CGFloat toolbarHeightDifference = toolBarHeight - previousToolbarHeight;
+    
     _containerView.frame = CGRectMake(_containerView.frame.origin.x, _containerView.frame.origin.y + navigationBarHeightDifference, _containerView.frame.size.width, _containerView.frame.size.height - navigationBarHeightDifference - toolbarHeightDifference);
+    
     _toolbar.frame = CGRectMake(_toolbar.frame.origin.x, _toolbar.frame.origin.y - navigationBarHeightDifference, _toolbar.frame.size.width, _toolbar.frame.size.height);
+    [self setToolbarHidden:YES];
 }
 
 #pragma mark -
@@ -178,6 +200,7 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
 #pragma mark -
 #pragma mark Push
 - (void)pushViewController:(UIViewController *)viewController withTransition:(ADTransition *)transition {
+    
     if (_isContainerViewTransitioning || _isNavigationBarTransitioning) {
         return;
     }
@@ -193,7 +216,7 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
         [_transitions addObject:[ADTransition nullTransition]];
     }
     
-    if (!_containerView) {
+    if (!_containerView){
         return;
     }
     
@@ -230,6 +253,65 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
     [_navigationBar pushNavigationItem:navigationItem animated:animated];
     [_toolbar setItems:viewController.toolbarItems animated:animated];
     
+    if (!animated) { // Call the delegate method if no animation
+        [self pushTransitionDidFinish:nil];
+    }
+}
+
+- (void)changeViewController:(UIViewController *)viewController withTransition:(ADTransition *)transition {
+    
+    if (_isContainerViewTransitioning || _isNavigationBarTransitioning) {
+        return;
+    }
+    
+    objc_setAssociatedObject(viewController, (__bridge const void *)(ADTransitionControllerAssociationKey), self, OBJC_ASSOCIATION_ASSIGN);
+    
+    UIViewController * viewControllerToRemoveFromView = [_viewControllers lastObject];
+    
+    [_viewControllers addObject:viewController];
+    if (transition) {
+        [_transitions addObject:transition];
+    } else {
+        [_transitions addObject:[ADTransition nullTransition]];
+    }
+    
+    if (!_containerView){
+        return;
+    }
+    
+    BOOL animated = transition ? YES : NO;
+    
+    
+    UIView * viewIn = viewController.view;
+    [self addChildViewController:viewController];
+    [viewController beginAppearanceTransition:YES animated:animated];
+    if ([self.delegate respondsToSelector:@selector(transitionController:willShowViewController:animated:)]) {
+        [self.delegate transitionController:self willShowViewController:viewController animated:animated];
+    }
+    viewIn.frame = _containerView.bounds;
+    [_containerView addSubview:viewIn];
+    
+    UIView * viewOut = viewControllerToRemoveFromView.view;
+    [viewControllerToRemoveFromView beginAppearanceTransition:NO animated:animated];
+    
+    _isContainerViewTransitioning = animated;
+    transition.delegate = self;
+    transition.type = ADTransitionTypePush;
+    [self _transitionfromView:viewOut toView:viewIn withTransition:transition];
+    
+//    _isNavigationBarTransitioning = animated;
+//    
+//    UINavigationItem * navigationItem = viewController.navigationItem;
+//    if (!navigationItem) {
+//        navigationItem = [[UINavigationItem alloc] initWithTitle:viewController.title];
+//    }
+//    if (animated) {
+//        _isNavigationBarTransitioning = YES;
+//    }
+//    navigationItem.hidesBackButton = (_viewControllers.count == 0); // Hide the "Back" button for the root view controller
+//    [_navigationBar pushNavigationItem:navigationItem animated:animated];
+//    [_toolbar setItems:viewController.toolbarItems animated:animated];
+//    
     if (!animated) { // Call the delegate method if no animation
         [self pushTransitionDidFinish:nil];
     }
@@ -297,7 +379,7 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
     
     // Create array that will be returned
     NSMutableArray * outViewControllers = [NSMutableArray arrayWithCapacity:(_viewControllers.count - indexInViewController - 1)];
-    for (int i = indexInViewController + 1; i < _viewControllers.count; i++) {
+    for (int i = (int)indexInViewController + 1; i < _viewControllers.count; i++) {
         [outViewControllers addObject:_viewControllers[i]];
     }
     
@@ -450,6 +532,7 @@ NSString * ADTransitionControllerAssociationKey = @"ADTransitionControllerAssoci
         frame.size.height = _containerView.frame.size.height + toolbarHeight;
     }
     _containerView.frame = frame;
+    
     if (animated) {
         [UIView commitAnimations];
     }

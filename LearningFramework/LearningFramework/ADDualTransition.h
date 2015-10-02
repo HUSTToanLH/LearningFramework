@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ADTransition.h"
+#import <UIKit/UIKit.h>
 
 @interface ADDualTransition : ADTransition {
     CAAnimation * _inAnimation;

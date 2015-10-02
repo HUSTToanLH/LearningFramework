@@ -7,6 +7,7 @@
 //
 
 #import "ADGlueTransition.h"
+#import <UIKit/UIKit.h>
 
 @implementation ADGlueTransition
 

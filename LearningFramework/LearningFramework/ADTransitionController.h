@@ -58,9 +58,11 @@
 @property(nonatomic, getter = isToolbarHidden, setter = setToolbarHidden:) BOOL toolbarHidden;
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController;
+- (id)initWithMainViewController:(UIViewController *)rootViewController;
 - (void)setNavigationBarHidden:(BOOL)hidden animated:(BOOL)animated;
 - (void)setToolbarHidden:(BOOL)hidden animated:(BOOL)animated;
 - (void)pushViewController:(UIViewController *)viewController withTransition:(ADTransition *)transition;
+- (void)changeViewController:(UIViewController *)viewController withTransition:(ADTransition *)transition;
 - (UIViewController *)popViewController;
 - (UIViewController *)popViewControllerWithTransition:(ADTransition *)transition;
 - (NSArray *)popToViewController:(UIViewController *)viewController;

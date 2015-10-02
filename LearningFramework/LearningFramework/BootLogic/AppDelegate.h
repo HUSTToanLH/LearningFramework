@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ADTransitionController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
++(ADTransitionController*)getMainTransition;
 @end

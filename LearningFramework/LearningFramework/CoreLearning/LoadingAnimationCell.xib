@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="x" id="KGk-i7-Jjw" customClass="LoadingAnimationCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onepiece.ico" translatesAutoresizingMaskIntoConstraints="NO" id="c93-o9-4Qv">
+                        <rect key="frame" x="0.0" y="0.0" width="46" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="r7G-38-ed2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading tableview cell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI0-Go-X1q">
+                        <rect key="frame" x="62" y="0.0" width="196" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="9jh-Uk-gFh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onepiece.ico" translatesAutoresizingMaskIntoConstraints="NO" id="aWC-qy-8KJ">
+                        <rect key="frame" x="274" y="0.0" width="46" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="3vH-jn-IcQ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="c93-o9-4Qv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="2az-3k-QPD"/>
+                    <constraint firstItem="aWC-qy-8KJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="7jm-XW-NTS"/>
+                    <constraint firstAttribute="centerY" secondItem="cI0-Go-X1q" secondAttribute="centerY" id="B9M-j9-Rcc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="aWC-qy-8KJ" secondAttribute="trailing" constant="-8" id="H0M-RL-cTa"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="aWC-qy-8KJ" secondAttribute="bottom" constant="-8" id="KJs-gE-7An"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="c93-o9-4Qv" secondAttribute="bottom" constant="-8" id="RWy-t4-76X"/>
+                    <constraint firstAttribute="centerX" secondItem="cI0-Go-X1q" secondAttribute="centerX" id="Xj9-ys-thg"/>
+                    <constraint firstItem="c93-o9-4Qv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="clD-d4-bKU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labelContent" destination="cI0-Go-X1q" id="oiW-bq-tF3"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="onepiece.ico" width="256" height="256"/>
+    </resources>
+</document>

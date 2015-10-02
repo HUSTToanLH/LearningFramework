@@ -11,4 +11,5 @@
 @interface MainScreen : UITableViewController
 @property (nonatomic, strong) NSArray* menu;
 @property (nonatomic, strong) NSString* about;
+
 @end

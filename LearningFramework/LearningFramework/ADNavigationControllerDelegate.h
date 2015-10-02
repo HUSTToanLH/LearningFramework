@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIViewController+ADTransitionController.h"
 
 @interface ADNavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
 

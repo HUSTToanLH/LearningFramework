@@ -7,6 +7,7 @@
 //
 
 #import "ADFoldTransition.h"
+#import <UIKit/UIKit.h>
 
 @implementation ADFoldTransition
 

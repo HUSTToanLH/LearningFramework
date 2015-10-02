@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ADTransitioningViewController.h"
 
-@interface UsingBlock : UIViewController
+@interface UsingBlock : ADTransitioningViewController
 
 @end

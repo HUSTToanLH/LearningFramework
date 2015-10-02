@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ADTransitioningViewController.h"
 
-@interface DemoVisualEffectView : UIViewController
+@interface DemoVisualEffectView : ADTransitioningViewController
 
 @end
