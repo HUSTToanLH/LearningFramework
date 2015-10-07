@@ -9,6 +9,7 @@
 #import "DemoVisualEffectView.h"
 #import "AutoLayout.h"
 #import "MainScreen.h"
+#import "LoadingAnimationTableView.h"
 
 @interface DemoVisualEffectView ()
 
@@ -56,6 +57,19 @@
 }
 
 -(void)onTapBack:(UITapGestureRecognizer*)ges{
+    if (ges.state == UIGestureRecognizerStateEnded) {
+        LoadingAnimationTableView *autoView = [LoadingAnimationTableView new];
+        autoView.view.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapBack2:)];
+        
+        [autoView.view addGestureRecognizer:tap];
+        
+        ADTransition * transition = [[ADCubeTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+        [vc changeViewController:autoView withTransition:transition];
+    }
+}
+
+-(void)onTapBack2:(UITapGestureRecognizer*)ges{
     if (ges.state == UIGestureRecognizerStateEnded) {
         ADTransition * transition = [[ADCubeTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
         [vc changeViewController:main withTransition:transition];

@@ -76,6 +76,64 @@
 				<key>status</key>
 				<true/>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Test DrawContext</string>
+				<key>class</key>
+				<string>TestDrawContext</string>
+				<key>status</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>TableView&amp;CollectionView</string>
+		<key>status</key>
+		<true/>
+		<key>childs</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Demo TableView</string>
+				<key>class</key>
+				<string>DemoTableView</string>
+				<key>status</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Demo CollectionView</string>
+				<key>class</key>
+				<string>DemoCollectionView</string>
+				<key>status</key>
+				<true/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Graphics &amp; Animation APIs</string>
+		<key>status</key>
+		<true/>
+		<key>childs</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>UIKit Dynamics</string>
+				<key>class</key>
+				<string>UIKitDynamics</string>
+				<key>status</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Core Image</string>
+				<key>class</key>
+				<string>CoreImage</string>
+				<key>status</key>
+				<true/>
+			</dict>
 		</array>
 	</dict>
 </array>

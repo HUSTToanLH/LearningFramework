@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoCollectionViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionItem" id="gTV-IL-0wX" customClass="DemoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="152"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJp-1j-4Es">
+                        <rect key="frame" x="0.0" y="16" width="133" height="136"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rem-Ed-Wp3">
+                                <rect key="frame" x="8" y="8" width="117" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ol-P0-Fnb">
+                                <rect key="frame" x="8" y="116" width="117" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="nL5-7u-OsV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rem-Ed-Wp3" firstAttribute="leading" secondItem="qJp-1j-4Es" secondAttribute="leading" constant="8" id="Da4-ka-sbH"/>
+                            <constraint firstItem="rem-Ed-Wp3" firstAttribute="top" secondItem="qJp-1j-4Es" secondAttribute="top" constant="8" id="EWf-u8-PP1"/>
+                            <constraint firstItem="8Ol-P0-Fnb" firstAttribute="top" secondItem="rem-Ed-Wp3" secondAttribute="bottom" constant="8" id="JPY-Mz-6pd"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ol-P0-Fnb" secondAttribute="bottom" id="VYU-wP-ee5"/>
+                            <constraint firstItem="8Ol-P0-Fnb" firstAttribute="leading" secondItem="qJp-1j-4Es" secondAttribute="leading" constant="8" id="mvP-Ee-ICM"/>
+                            <constraint firstAttribute="trailing" secondItem="8Ol-P0-Fnb" secondAttribute="trailing" constant="8" id="t0K-PS-WhZ"/>
+                            <constraint firstAttribute="trailing" secondItem="rem-Ed-Wp3" secondAttribute="trailing" constant="8" id="umw-je-5Og"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushpin.png" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-Sb-XRh">
+                        <rect key="frame" x="56" y="0.0" width="21" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="E1J-IK-Acr"/>
+                            <constraint firstAttribute="height" constant="27" id="wjW-Y8-8mR"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qJp-1j-4Es" secondAttribute="trailing" id="4XB-bt-JkQ"/>
+                <constraint firstItem="UNp-Sb-XRh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AZ7-HR-3Ep"/>
+                <constraint firstAttribute="centerX" secondItem="UNp-Sb-XRh" secondAttribute="centerX" id="Gsm-7X-4rY"/>
+                <constraint firstItem="qJp-1j-4Es" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="WWd-EW-UHx"/>
+                <constraint firstItem="qJp-1j-4Es" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jku-PE-RIq"/>
+                <constraint firstAttribute="bottom" secondItem="qJp-1j-4Es" secondAttribute="bottom" id="rcy-S1-fhs"/>
+            </constraints>
+            <size key="customSize" width="133" height="152"/>
+            <connections>
+                <outlet property="imageBg" destination="qJp-1j-4Es" id="xot-EE-j9l"/>
+                <outlet property="imageItem" destination="rem-Ed-Wp3" id="jHh-El-1Oq"/>
+                <outlet property="imagePush" destination="UNp-Sb-XRh" id="Xwm-YO-gzl"/>
+                <outlet property="labelItem" destination="8Ol-P0-Fnb" id="9V6-6R-VSO"/>
+            </connections>
+            <point key="canvasLocation" x="306.5" y="463"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pushpin.png" width="22" height="31"/>
+    </resources>
+</document>

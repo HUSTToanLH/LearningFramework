@@ -10,19 +10,13 @@
 #import "LoadingAnimationCell.h"
 
 @interface LoadingAnimationTableView ()
-
 @end
 
 @implementation LoadingAnimationTableView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,16 +24,38 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)longPressHandle:(UILongPressGestureRecognizer*)ges{
+    CGPoint point = [ges locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    if (!indexPath) {
+        NSLog(@"Gesture not in tableview cell.");
+    }
+    else{
+        if (ges.state == UIGestureRecognizerStateEnded) {
+            NSLog(@"Gesture was ended.");
+        }
+        else if (ges.state == UIGestureRecognizerStateBegan){
+            LoadingAnimationCell *cell = (LoadingAnimationCell*)[self.tableView cellForRowAtIndexPath:indexPath];
+//            [cell setExpand];
+            UIView *cellContentView  = [cell contentView];
+            CATransform3D transform = CATransform3DIdentity;
+//            transform = CATransform3DMakeScale(1, 1, 1);
+            CGPoint offsetPositioning = CGPointMake(0, cell.contentView.frame.size.height*4);
+            transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y, -50.0);
+            cellContentView.layer.transform = transform;
+            cellContentView.layer.opacity = 0.8;
+        }
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 100;
+    return 700;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,6 +64,10 @@
         cell = [[NSBundle mainBundle] loadNibNamed:@"LoadingAnimationCell" owner:nil options:nil].firstObject;
 //        cell = [[LoadingAnimationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"x"];
 //        cell.accessoryType = UITableViewCellAccessoryDetailButton;
+        
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressHandle:)];
+        longPress.minimumPressDuration = 1.0;
+        [cell addGestureRecognizer:longPress];
     }
     [cell setData:(int)indexPath.row];
     
@@ -76,6 +96,21 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    LoadingAnimationCell *cell = (LoadingAnimationCell*)[tableView cellForRowAtIndexPath:indexPath];
+    
+    CGRect cellRect = [tableView rectForRowAtIndexPath:indexPath];
+    CGRect cellRectSuper = [tableView convertRect:cellRect toView:[tableView superview]];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        if (CGAffineTransformEqualToTransform(cell.transform, CGAffineTransformIdentity)) {
+            cell.transform = CGAffineTransformScale(cell.transform, 1, 4);
+        }else{
+            cell.transform = CGAffineTransformIdentity;
+        }
+    } completion:nil];
 }
 
 @end

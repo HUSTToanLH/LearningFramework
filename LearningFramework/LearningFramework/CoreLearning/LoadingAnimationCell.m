@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 ToanLH. All rights reserved.
 //
 
+#define HIGHLIGHT_Y_CONTROL_POINT   25
+
 #import "LoadingAnimationCell.h"
 @interface LoadingAnimationCell()
 @property (strong, nonatomic) IBOutlet UILabel *labelContent;
@@ -28,7 +30,10 @@
 }
 
 -(void)setData:(int)numberOfLine{
-    _labelContent.text = [@"OnePiece loading animation cell " stringByAppendingString:[NSString stringWithFormat:@"%d", numberOfLine]];
+    _labelContent.text = [@"OnePiece chap " stringByAppendingString:[NSString stringWithFormat:@"%d", numberOfLine]];
 }
 
+-(void)setExpand{
+    _labelContent.text = [_labelContent.text stringByAppendingString:@"lp"];
+}
 @end

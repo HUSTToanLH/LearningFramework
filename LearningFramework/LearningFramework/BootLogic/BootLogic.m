@@ -55,6 +55,7 @@
     mainScreen.about = @"This is demo learning framework demo app. It is collection of sample code of AVFoundation";
     //--------- End of customization -----------
     ADTransitionController * transitionController = [[ADTransitionController alloc] initWithRootViewController:mainScreen];
+    
     window.rootViewController = transitionController;
 }
 @end

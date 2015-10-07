@@ -1,5 +1,5 @@
 //
-//  LoadingAnimationCell.h
+//  TestDrawContext.h
 //  LearningFramework
 //
 //  Created by TaiND on 10/2/15.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoadingAnimationCell : UITableViewCell
--(void)setData:(int)numberOfLine;
--(void)setExpand;
+@interface TestDrawContext : UIViewController
+@property(nonatomic, strong) IBOutlet UIImageView *myImageView;
 @end

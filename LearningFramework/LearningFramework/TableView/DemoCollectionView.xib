@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoCollectionView">
+            <connections>
+                <outlet property="collectionView" destination="4Dr-q3-YDJ" id="5Ll-gA-p39"/>
+                <outlet property="shareButton" destination="BVX-Sf-iaP" id="Mch-bX-1dS"/>
+                <outlet property="textField" destination="883-HU-4Ge" id="ZG1-SG-ESy"/>
+                <outlet property="toolbar" destination="Cnz-G6-3P3" id="WZz-b1-HCh"/>
+                <outlet property="view" destination="jJg-kk-sdt" id="L8w-kr-vof"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jJg-kk-sdt">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="c2D-ZQ-Nf3">
+                    <rect key="frame" x="67" y="15" width="70" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="g9G-SD-Ma1"/>
+                        <constraint firstAttribute="width" constant="70" id="xIx-54-fhy"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="883-HU-4Ge">
+                    <rect key="frame" x="145" y="15" width="150" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="2ZC-yv-Qzy"/>
+                        <constraint firstAttribute="width" constant="150" id="VuN-98-54w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="cq3-8E-BOP"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ynm-Le-yTQ">
+                    <rect key="frame" x="16" y="46" width="343" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="AJR-K8-8KC"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4Dr-q3-YDJ">
+                    <rect key="frame" x="16" y="64" width="343" height="547"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6OC-z5-H43">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="JgP-2r-Ors"/>
+                        <outlet property="delegate" destination="-1" id="daj-iU-HRZ"/>
+                    </connections>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cnz-G6-3P3">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="3Qq-Sh-eLm"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Share" id="BVX-Sf-iaP">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="-1" id="UOO-jb-B6a"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cnz-G6-3P3" secondAttribute="bottom" id="3Br-5M-hLM"/>
+                <constraint firstItem="Ynm-Le-yTQ" firstAttribute="top" secondItem="c2D-ZQ-Nf3" secondAttribute="bottom" constant="13" id="7iv-Xp-ATB"/>
+                <constraint firstItem="Cnz-G6-3P3" firstAttribute="leading" secondItem="jJg-kk-sdt" secondAttribute="leading" id="8Tj-sD-1Gi"/>
+                <constraint firstItem="4Dr-q3-YDJ" firstAttribute="top" secondItem="Ynm-Le-yTQ" secondAttribute="bottom" constant="8" id="AHo-Pb-zg1"/>
+                <constraint firstItem="Ynm-Le-yTQ" firstAttribute="leading" secondItem="jJg-kk-sdt" secondAttribute="leading" constant="16" id="JUo-Rq-0cC"/>
+                <constraint firstItem="c2D-ZQ-Nf3" firstAttribute="top" secondItem="jJg-kk-sdt" secondAttribute="top" constant="15" id="LGd-rW-Nnq"/>
+                <constraint firstItem="883-HU-4Ge" firstAttribute="top" secondItem="jJg-kk-sdt" secondAttribute="top" constant="15" id="MWt-6A-yZb"/>
+                <constraint firstItem="c2D-ZQ-Nf3" firstAttribute="leading" secondItem="jJg-kk-sdt" secondAttribute="leading" constant="67" id="PPT-s4-NHQ"/>
+                <constraint firstItem="Cnz-G6-3P3" firstAttribute="top" secondItem="4Dr-q3-YDJ" secondAttribute="bottom" constant="12" id="YdI-L8-OxO"/>
+                <constraint firstItem="4Dr-q3-YDJ" firstAttribute="leading" secondItem="jJg-kk-sdt" secondAttribute="leading" constant="16" id="Zep-kD-MUr"/>
+                <constraint firstAttribute="trailing" secondItem="4Dr-q3-YDJ" secondAttribute="trailing" constant="16" id="lDO-5A-f2I"/>
+                <constraint firstItem="883-HU-4Ge" firstAttribute="leading" secondItem="c2D-ZQ-Nf3" secondAttribute="trailing" constant="8" id="mzh-18-3rH"/>
+                <constraint firstAttribute="trailing" secondItem="Ynm-Le-yTQ" secondAttribute="trailing" constant="16" id="pVd-NJ-ZrN"/>
+                <constraint firstAttribute="trailing" secondItem="Cnz-G6-3P3" secondAttribute="trailing" id="ssF-aN-IQz"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="divider_bar.png" width="697" height="13"/>
+        <image name="search_text.png" width="97" height="25"/>
+    </resources>
+</document>
