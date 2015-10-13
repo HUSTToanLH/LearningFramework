@@ -45,6 +45,11 @@
 		035E289E1BC4F4F400E6DBC5 /* CoreImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E289D1BC4F4F400E6DBC5 /* CoreImage.m */; };
 		035E28A11BC4F6C400E6DBC5 /* Zoro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 035E28A01BC4F6C400E6DBC5 /* Zoro.jpg */; };
 		035E28A31BC4F6CE00E6DBC5 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 035E28A21BC4F6CE00E6DBC5 /* image.png */; };
+		035E28A71BC620D100E6DBC5 /* CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E28A51BC620D100E6DBC5 /* CoreGraphics.m */; };
+		035E28A81BC620D100E6DBC5 /* CoreGraphics.xib in Resources */ = {isa = PBXBuildFile; fileRef = 035E28A61BC620D100E6DBC5 /* CoreGraphics.xib */; };
+		035E28AB1BC620FA00E6DBC5 /* PushButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E28AA1BC620FA00E6DBC5 /* PushButtonView.m */; };
+		035E28BB1BC75DF300E6DBC5 /* CounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E28B91BC66AB600E6DBC5 /* CounterView.m */; };
+		035E28BE1BC7646700E6DBC5 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E28BD1BC7646700E6DBC5 /* GraphView.m */; };
 		03ABBAB51BAFA2690039E259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ABBAB41BAFA2690039E259 /* main.m */; };
 		03ABBAC01BAFA2690039E259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03ABBABF1BAFA2690039E259 /* Images.xcassets */; };
 		03ABBAC31BAFA2690039E259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03ABBAC11BAFA2690039E259 /* LaunchScreen.xib */; };
@@ -63,6 +68,7 @@
 		03D43F771BBA6ABD003A8D40 /* UsingBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D43F751BBA6ABD003A8D40 /* UsingBlock.m */; };
 		03D43F781BBA6ABD003A8D40 /* UsingBlock.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D43F761BBA6ABD003A8D40 /* UsingBlock.xib */; };
 		03D43F7B1BBA7A71003A8D40 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D43F7A1BBA7A71003A8D40 /* Car.m */; };
+		03EC11DC1BCBA91900A2FA25 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EC11DB1BCBA91900A2FA25 /* Realm.framework */; };
 		03F8EC391BC216D800136E29 /* TestDrawContext.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F8EC381BC216D800136E29 /* TestDrawContext.xib */; };
 		03F8EC3F1BC22C0300136E29 /* DemoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F8EC3D1BC22C0300136E29 /* DemoTableView.m */; };
 		03F8EC401BC22C0300136E29 /* DemoTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F8EC3E1BC22C0300136E29 /* DemoTableView.xib */; };
@@ -182,6 +188,15 @@
 		035E289D1BC4F4F400E6DBC5 /* CoreImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreImage.m; path = "Graphics&AnimationAPIs/CoreImage.m"; sourceTree = "<group>"; };
 		035E28A01BC4F6C400E6DBC5 /* Zoro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Zoro.jpg; sourceTree = "<group>"; };
 		035E28A21BC4F6CE00E6DBC5 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		035E28A41BC620D100E6DBC5 /* CoreGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreGraphics.h; path = "Graphics&AnimationAPIs/CoreGraphics.h"; sourceTree = "<group>"; };
+		035E28A51BC620D100E6DBC5 /* CoreGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreGraphics.m; path = "Graphics&AnimationAPIs/CoreGraphics.m"; sourceTree = "<group>"; };
+		035E28A61BC620D100E6DBC5 /* CoreGraphics.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CoreGraphics.xib; path = "Graphics&AnimationAPIs/CoreGraphics.xib"; sourceTree = "<group>"; };
+		035E28A91BC620FA00E6DBC5 /* PushButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushButtonView.h; path = "Graphics&AnimationAPIs/PushButtonView.h"; sourceTree = "<group>"; };
+		035E28AA1BC620FA00E6DBC5 /* PushButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushButtonView.m; path = "Graphics&AnimationAPIs/PushButtonView.m"; sourceTree = "<group>"; };
+		035E28B81BC66AB600E6DBC5 /* CounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CounterView.h; path = "Graphics&AnimationAPIs/CounterView.h"; sourceTree = "<group>"; };
+		035E28B91BC66AB600E6DBC5 /* CounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CounterView.m; path = "Graphics&AnimationAPIs/CounterView.m"; sourceTree = "<group>"; };
+		035E28BC1BC7646700E6DBC5 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = "Graphics&AnimationAPIs/GraphView.h"; sourceTree = "<group>"; };
+		035E28BD1BC7646700E6DBC5 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = "Graphics&AnimationAPIs/GraphView.m"; sourceTree = "<group>"; };
 		03ABBAAF1BAFA2690039E259 /* LearningFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03ABBAB31BAFA2690039E259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03ABBAB41BAFA2690039E259 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -210,6 +225,7 @@
 		03D43F761BBA6ABD003A8D40 /* UsingBlock.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsingBlock.xib; path = CoreLearning/UsingBlock.xib; sourceTree = "<group>"; };
 		03D43F791BBA7A71003A8D40 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Car.h; path = CoreLearning/Car.h; sourceTree = "<group>"; };
 		03D43F7A1BBA7A71003A8D40 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Car.m; path = CoreLearning/Car.m; sourceTree = "<group>"; };
+		03EC11DB1BCBA91900A2FA25 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		03F8EC381BC216D800136E29 /* TestDrawContext.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestDrawContext.xib; path = CoreLearning/TestDrawContext.xib; sourceTree = "<group>"; };
 		03F8EC3C1BC22C0300136E29 /* DemoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoTableView.h; path = TableView/DemoTableView.h; sourceTree = "<group>"; };
 		03F8EC3D1BC22C0300136E29 /* DemoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoTableView.m; path = TableView/DemoTableView.m; sourceTree = "<group>"; };
@@ -271,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EC11DC1BCBA91900A2FA25 /* Realm.framework in Frameworks */,
 				0325FEDA1BBBF0E400CC334E /* QuartzCore.framework in Frameworks */,
 				03ABBB011BAFB51E0039E259 /* MediaPlayer.framework in Frameworks */,
 				03ABBAFF1BAFA8E30039E259 /* AVFoundation.framework in Frameworks */,
@@ -349,6 +366,7 @@
 		03ABBAA61BAFA2690039E259 = {
 			isa = PBXGroup;
 			children = (
+				03EC11DB1BCBA91900A2FA25 /* Realm.framework */,
 				0325FED91BBBF0E400CC334E /* QuartzCore.framework */,
 				03ABBB001BAFB51E0039E259 /* MediaPlayer.framework */,
 				03ABBAFE1BAFA8E30039E259 /* AVFoundation.framework */,
@@ -375,6 +393,7 @@
 				03ABBB0B1BB0021C0039E259 /* Autolayout */,
 				03F8EC3B1BC22B9300136E29 /* TableView&CollectionView */,
 				03F8ECA51BC3A69200136E29 /* Graphics&AnimationAPIs */,
+				03EC11DD1BCBA93100A2FA25 /* CoreData */,
 				03ABBABF1BAFA2690039E259 /* Images.xcassets */,
 				03ABBAC11BAFA2690039E259 /* LaunchScreen.xib */,
 				03ABBAB21BAFA2690039E259 /* Supporting Files */,
@@ -453,6 +472,13 @@
 				0325FF641BBE6F3B00CC334E /* onepiece.ico */,
 			);
 			name = CoreLearning;
+			sourceTree = "<group>";
+		};
+		03EC11DD1BCBA93100A2FA25 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		03F8EC3B1BC22B9300136E29 /* TableView&CollectionView */ = {
@@ -547,6 +573,15 @@
 				035E289A1BC4F0E900E6DBC5 /* UICircleView.m */,
 				035E289C1BC4F4F400E6DBC5 /* CoreImage.h */,
 				035E289D1BC4F4F400E6DBC5 /* CoreImage.m */,
+				035E28A41BC620D100E6DBC5 /* CoreGraphics.h */,
+				035E28A51BC620D100E6DBC5 /* CoreGraphics.m */,
+				035E28A61BC620D100E6DBC5 /* CoreGraphics.xib */,
+				035E28A91BC620FA00E6DBC5 /* PushButtonView.h */,
+				035E28AA1BC620FA00E6DBC5 /* PushButtonView.m */,
+				035E28B81BC66AB600E6DBC5 /* CounterView.h */,
+				035E28B91BC66AB600E6DBC5 /* CounterView.m */,
+				035E28BC1BC7646700E6DBC5 /* GraphView.h */,
+				035E28BD1BC7646700E6DBC5 /* GraphView.m */,
 			);
 			name = "Graphics&AnimationAPIs";
 			sourceTree = "<group>";
@@ -582,6 +617,7 @@
 				TargetAttributes = {
 					03ABBAAE1BAFA2690039E259 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 49BVYUC5DB;
 					};
 				};
 			};
@@ -639,6 +675,7 @@
 				03F8EC7D1BC2310C00136E29 /* DemoCollectionView.xib in Resources */,
 				03F8EC6F1BC2306C00136E29 /* navbar.png in Resources */,
 				03ABBAC01BAFA2690039E259 /* Images.xcassets in Resources */,
+				035E28A81BC620D100E6DBC5 /* CoreGraphics.xib in Resources */,
 				035E28A11BC4F6C400E6DBC5 /* Zoro.jpg in Resources */,
 				03ABBB061BAFB66B0039E259 /* PlayVideo.xib in Resources */,
 				03F8EC761BC2306C00136E29 /* search_field@2x.png in Resources */,
@@ -666,11 +703,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035E28BB1BC75DF300E6DBC5 /* CounterView.m in Sources */,
 				0325FF261BBBF13200CC334E /* UIViewController+ADTransitionController.m in Sources */,
 				03F8ECA11BC2860300136E29 /* UIView+Copy.m in Sources */,
 				03D43F7B1BBA7A71003A8D40 /* Car.m in Sources */,
+				035E28A71BC620D100E6DBC5 /* CoreGraphics.m in Sources */,
 				03F8EC441BC22DAA00136E29 /* DemoTableViewCell.m in Sources */,
 				0325FF211BBBF13200CC334E /* ADTransition.m in Sources */,
+				035E28AB1BC620FA00E6DBC5 /* PushButtonView.m in Sources */,
 				0325FF251BBBF13200CC334E /* ADZoomTransition.m in Sources */,
 				0325FF151BBBF13200CC334E /* ADFoldTransition.m in Sources */,
 				0325FF191BBBF13200CC334E /* ADNavigationControllerDelegate.m in Sources */,
@@ -684,6 +724,7 @@
 				0325FF161BBBF13200CC334E /* ADGhostTransition.m in Sources */,
 				0325FF0E1BBBF13100CC334E /* ADBackFadeTransition.m in Sources */,
 				0325FF5D1BBE6E4000CC334E /* LoadingAnimationTableView.m in Sources */,
+				035E28BE1BC7646700E6DBC5 /* GraphView.m in Sources */,
 				0325FF681BBE8F0D00CC334E /* TestDrawContext.m in Sources */,
 				0325FF231BBBF13200CC334E /* ADTransitioningDelegate.m in Sources */,
 				0325FF121BBBF13200CC334E /* ADDualTransition.m in Sources */,
@@ -819,6 +860,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LearningFramework/PrefixHeader.pch;
 				INFOPLIST_FILE = LearningFramework/Info.plist;
@@ -832,6 +878,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LearningFramework/PrefixHeader.pch;
 				INFOPLIST_FILE = LearningFramework/Info.plist;

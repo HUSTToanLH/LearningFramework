@@ -134,6 +134,14 @@
 				<key>status</key>
 				<true/>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>Core Graphics</string>
+				<key>class</key>
+				<string>CoreGraphics</string>
+				<key>status</key>
+				<true/>
+			</dict>
 		</array>
 	</dict>
 </array>
