@@ -8,6 +8,7 @@
 
 #import "LoadingAnimationTableView.h"
 #import "LoadingAnimationCell.h"
+#import "TestDrawContext.h"
 
 @interface LoadingAnimationTableView ()
 @end
@@ -24,29 +25,29 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)longPressHandle:(UILongPressGestureRecognizer*)ges{
-    CGPoint point = [ges locationInView:self.tableView];
-    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
-    if (!indexPath) {
-        NSLog(@"Gesture not in tableview cell.");
-    }
-    else{
-        if (ges.state == UIGestureRecognizerStateEnded) {
-            NSLog(@"Gesture was ended.");
-        }
-        else if (ges.state == UIGestureRecognizerStateBegan){
-            LoadingAnimationCell *cell = (LoadingAnimationCell*)[self.tableView cellForRowAtIndexPath:indexPath];
-//            [cell setExpand];
-            UIView *cellContentView  = [cell contentView];
-            CATransform3D transform = CATransform3DIdentity;
-//            transform = CATransform3DMakeScale(1, 1, 1);
-            CGPoint offsetPositioning = CGPointMake(0, cell.contentView.frame.size.height*4);
-            transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y, -50.0);
-            cellContentView.layer.transform = transform;
-            cellContentView.layer.opacity = 0.8;
-        }
-    }
-}
+//-(void)longPressHandle:(UILongPressGestureRecognizer*)ges{
+//    CGPoint point = [ges locationInView:self.tableView];
+//    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+//    if (!indexPath) {
+//        NSLog(@"Gesture not in tableview cell.");
+//    }
+//    else{
+//        if (ges.state == UIGestureRecognizerStateEnded) {
+//            NSLog(@"Gesture was ended.");
+//        }
+//        else if (ges.state == UIGestureRecognizerStateBegan){
+//            LoadingAnimationCell *cell = (LoadingAnimationCell*)[self.tableView cellForRowAtIndexPath:indexPath];
+////            [cell setExpand];
+//            UIView *cellContentView  = [cell contentView];
+//            CATransform3D transform = CATransform3DIdentity;
+////            transform = CATransform3DMakeScale(1, 1, 1);
+//            CGPoint offsetPositioning = CGPointMake(0, cell.contentView.frame.size.height*4);
+//            transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y, -50.0);
+//            cellContentView.layer.transform = transform;
+//            cellContentView.layer.opacity = 0.8;
+//        }
+//    }
+//}
 
 #pragma mark - Table view data source
 
@@ -65,9 +66,9 @@
 //        cell = [[LoadingAnimationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"x"];
 //        cell.accessoryType = UITableViewCellAccessoryDetailButton;
         
-        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressHandle:)];
-        longPress.minimumPressDuration = 1.0;
-        [cell addGestureRecognizer:longPress];
+//        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressHandle:)];
+//        longPress.minimumPressDuration = 1.0;
+//        [cell addGestureRecognizer:longPress];
     }
     [cell setData:(int)indexPath.row];
     
@@ -100,17 +101,31 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LoadingAnimationCell *cell = (LoadingAnimationCell*)[tableView cellForRowAtIndexPath:indexPath];
+//    CGRect cellRect = [tableView rectForRowAtIndexPath:indexPath];
+//    
+//    [UIView animateWithDuration:0.5 animations:^{
+//        if (CGAffineTransformEqualToTransform(cell.transform, CGAffineTransformIdentity)) {
+//            cell.transform = CGAffineTransformScale(cell.transform, 1, 4);
+//        }else{
+//            cell.transform = CGAffineTransformIdentity;
+//        }
+//    } completion:nil];
     
-    CGRect cellRect = [tableView rectForRowAtIndexPath:indexPath];
-    CGRect cellRectSuper = [tableView convertRect:cellRect toView:[tableView superview]];
+    NSString* xibClass = @"TestDrawContext";
     
-    [UIView animateWithDuration:0.5 animations:^{
-        if (CGAffineTransformEqualToTransform(cell.transform, CGAffineTransformIdentity)) {
-            cell.transform = CGAffineTransformScale(cell.transform, 1, 4);
-        }else{
-            cell.transform = CGAffineTransformIdentity;
-        }
-    } completion:nil];
+    UIViewController* detailScreen;
+    
+    if([[NSBundle mainBundle] pathForResource:xibClass ofType:@"nib"] != nil)
+    {
+        //If the xib file exists
+        detailScreen = [(UIViewController*)[NSClassFromString(xibClass) alloc] initWithNibName:xibClass bundle:nil];
+    } else {
+        //If the xib file does not exist
+        detailScreen = [NSClassFromString(xibClass) new];
+    }
+    detailScreen.title = [NSString stringWithFormat:@"One piece chap %d",(int)indexPath.row];
+    ADTransition * transition = [[ADFlipTransition alloc] initWithDuration:0.25f orientation:ADTransitionRightToLeft sourceRect:self.view.frame];
+    [self.transitionController pushViewController:detailScreen withTransition:transition];
 }
 
 @end
